@@ -1,0 +1,9 @@
+drop table DeliveryAddress
+drop table Cart
+drop table BillDetails
+drop table Bill
+drop table Customer
+drop table Position
+drop table product
+drop table producer
+drop table product_type
