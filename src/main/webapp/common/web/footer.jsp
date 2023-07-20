@@ -1,3 +1,13 @@
+<%@include file="/common/taglib.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
 <footer class="footer_area clearfix">
     <div class="container">
         <div class="row align-items-center">
@@ -6,7 +16,7 @@
                 <div class="single_widget_area">
                     <!-- Logo -->
                     <div class="footer-logo mr-50">
-                        <a href="index.html"><img src="img/core-img/logo2.png" alt=""></a>
+                        <a href="index.html"><img src="<c:url value="/template/web/img/core-img/logo2.png"/>" alt=""></a>
                     </div>
                     <!-- Copywrite Text -->
                     <p class="copywrite"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -24,7 +34,7 @@
                             <div class="collapse navbar-collapse" id="footerNavContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="index.html">Home</a>
+                                        <a class="nav-link" href="<c:url value="/trang-chu"/> ">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="shop.html">Shop</a>
@@ -47,3 +57,7 @@
         </div>
     </div>
 </footer>
+</body>
+
+</html>
+
