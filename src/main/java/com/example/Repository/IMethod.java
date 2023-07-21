@@ -1,7 +1,6 @@
-package com.example.DAO;
+package com.example.Repository;
 
 import java.util.List;
-import java.util.Objects;
 
 public interface IMethod<T>{
     public void addData(T t);
@@ -9,4 +8,5 @@ public interface IMethod<T>{
     public void deleteData(T t,Object obj);
     public List<T> getList();
     public T getObjectById(String Id);
+    public List<T> getListbyCondition(String condition);
 }

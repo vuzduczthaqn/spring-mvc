@@ -76,19 +76,6 @@ public class Product {
         this.detailsSet = detailsSet;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Product)) return false;
-        Product product = (Product) o;
-        return getProductId() == product.getProductId() && Float.compare(product.getPrice(), getPrice()) == 0 && getQuantity() == product.getQuantity() && Objects.equals(getProductName(), product.getProductName()) && Objects.equals(getPathImg(), product.getPathImg()) && Objects.equals(getDescribe(), product.getDescribe()) && Objects.equals(getDetailsSet(), product.getDetailsSet());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getProductId(), getProductName(), getPathImg(), getPrice(), getDescribe(), getQuantity(), getDetailsSet());
-    }
-
     public int getProductId() {
         return productId;
     }
@@ -143,5 +130,18 @@ public class Product {
 
     public void setDetailsSet(Set<BillDetails> detailsSet) {
         this.detailsSet = detailsSet;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Product)) return false;
+        Product product = (Product) o;
+        return getProductId() == product.getProductId() && Float.compare(product.getPrice(), getPrice()) == 0 && getQuantity() == product.getQuantity() && Objects.equals(getProductName(), product.getProductName()) && Objects.equals(getPathImg(), product.getPathImg()) && Objects.equals(getDescribe(), product.getDescribe()) && Objects.equals(getDetailsSet(), product.getDetailsSet()) && Objects.equals(getCartSet(), product.getCartSet()) && Objects.equals(getProducer(), product.getProducer()) && Objects.equals(getProductType(), product.getProductType());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getProductId(), getProductName(), getPathImg(), getPrice(), getDescribe(), getQuantity(), getDetailsSet(), getCartSet(), getProducer(), getProductType());
     }
 }

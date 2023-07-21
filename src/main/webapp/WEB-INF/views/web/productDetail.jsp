@@ -104,7 +104,7 @@
                     </div>
 
                     <!-- Add to Cart Form -->
-                    <form class="cart clearfix" action="<c:url value="/san-pham/${product.productName}-${product.productId}" />" method="post">
+                    <form class="cart clearfix" action="<c:url value="/api-addCart" />" method="post">
                         <div class="cart-btn d-flex mb-50">
                             <p>Qty</p>
                             <div class="quantity">
@@ -113,14 +113,32 @@
                                 <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
                             </div>
                         </div>
-                        <button type="submit" name="addtocart" value="5" class="btn amado-btn">Add to cart</button>
+                            <button type="button" onclick="addToCart('${product.productId}')" class="btn amado-btn">Add to cart</button>
                     </form>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+    // Function to handle AJAX request
+    function addToCart(productId) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "<c:url value="/api-addCart"/>", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Do something with the response (if needed)
+                // For example, update cart count, update cart view, etc.
+                // ...
+            }
+        };
+        var qty = document.getElementById('qty').value;
+        var params = "pro=" + encodeURIComponent(productId) + "&quantity=" + encodeURIComponent(qty);
+        xhr.send(params);
+    }
+</script>
+
 <!-- Product Details Area End -->
 </body>
 </html>

@@ -55,7 +55,7 @@
     <div class="mobile-nav">
         <!-- Navbar Brand -->
         <div class="amado-navbar-brand">
-            <a href="index.html"><img src="<c:url value="/template/web/img/core-img/logo.png"/>" alt=""></a>
+            <a href="c:url value="/trang-chu"/>"><img src="<c:url value="/template/web/img/core-img/logo.png"/>" alt=""></a>
         </div>
         <!-- Navbar Toggler -->
         <div class="amado-navbar-toggler">
@@ -74,7 +74,7 @@
 <!-- ##### Main Content Wrapper End ##### -->
 
 <!-- ##### Footer Area Start ##### -->
-<%@include file="/common/web/footer.jsp"%>
+    <%@include file="/common/web/footer.jsp"%>
 <!-- ##### Footer Area End ##### -->
 
 <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->

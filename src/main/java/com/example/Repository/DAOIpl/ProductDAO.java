@@ -1,7 +1,7 @@
-package com.example.DAO.DAOIpl;
+package com.example.Repository.DAOIpl;
 
-import com.example.DAO.IMethod;
-import com.example.DAO.getConnect;
+import com.example.Repository.IMethod;
+import com.example.Repository.getConnect;
 import com.example.entity.Product;
 import jakarta.persistence.Query;
 import org.hibernate.HibernateException;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+
 @Repository
 public class ProductDAO implements IMethod <Product>{
     @Autowired
@@ -56,5 +56,10 @@ public class ProductDAO implements IMethod <Product>{
             e.printStackTrace();
         }
         return new Product();
+    }
+
+    @Override
+    public List<Product> getListbyCondition(String condition) {
+        return null;
     }
 }

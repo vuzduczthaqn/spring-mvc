@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 import com.example.entity.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-
+@Component
 public class hibernateConfig {
     private static final SessionFactory FACTORY;
     static {

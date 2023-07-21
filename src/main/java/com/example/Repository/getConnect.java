@@ -1,18 +1,18 @@
-package com.example.DAO;
+package com.example.Repository;
 
 import com.example.config.hibernateConfig;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class getConnect {
     private final Session session;
-    protected getConnect( ) {
-        this.session = hibernateConfig.getConnect().openSession();
+    @Autowired
+    private hibernateConfig config;
+    public getConnect() {
+        this.session = config.getConnect().openSession();
     }
     public Session getSession(){
         return session;
